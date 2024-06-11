@@ -6,7 +6,7 @@ describe('apply digital user flow', () => {
   beforeEach(() => { cy.visit('https://automationexercise.com')})
   afterEach(() => {cy.logout()})
 
-  it('Test Cases 1-15 Create an acount and place an order', () => {
+  it('Test Case 1:  1-15 Create an acount and place an order', () => {
     //1. Enter the website and scroll down about halfway down the page.
     cy.scrollTo('center')
     //2. Chose a product and click on “View product” under the picture of the product.
@@ -33,7 +33,7 @@ describe('apply digital user flow', () => {
     //15.  Click on “Logout” on top header
   });
 
-  it('Test Cases 16-20 Login and submit a Cuntact Us form', () => {
+  it('Test Case 2:  16-20 Login and submit a Cuntact Us form', () => {
    //16. On the “Login to your account” box and enter with previously created user
     cy.login()
     cy.signin('username998@email.com',1234)
