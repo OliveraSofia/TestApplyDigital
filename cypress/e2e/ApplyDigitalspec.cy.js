@@ -3,7 +3,7 @@ describe('apply digital user flow', () => {
 
 //var element = require('../page/pageObjects')
 
-  beforeEach(() => { cy.visit('https://automationexercise.com')})
+  beforeEach(() => { cy.visit(Cypress.env('url'))})
   afterEach(() => {cy.logout()})
 
   it('Test Case 1:  1-15 Create an acount and place an order', () => {
@@ -17,17 +17,29 @@ describe('apply digital user flow', () => {
     //6. Fill in an email address and click on “Register / Login”
     cy.popUpLink()
     //7. Enter name and email under “New User Signup”
-    cy.signup('username998','username998@email.com')
+    cy.signup(Cypress.env('username'),Cypress.env('email'))
     //8. Fill in all information and click on “Create Account”
-    cy.submitNewUser(1234, 1 , 1, 1, 'firstname998','lastname998', 'Company998', 'Adress998', 'BA','AR','CABA','998','1111111111') 
+    cy.submitNewUser(Cypress.env('password'),
+     Cypress.env('bDay'), 
+     Cypress.env('bMonth'),
+     Cypress.env('bYear'),
+     Cypress.env('firstName'), 
+     Cypress.env('lastName'),
+     Cypress.env('company'),
+     Cypress.env('adress'),
+     Cypress.env('country'),
+     Cypress.env('state'),
+     Cypress.env('city'),
+     Cypress.env('zipcode'),
+     Cypress.env('mobile')) 
     //9. Click on “Continue” under “ACCOUNT CREATED!” title
     cy.continue()
     //10. Click on the Cart in the header
     //11. Click on “Proceed to checkout”
     //12. Add a comment and click on “Place Order”
-    cy.placeOrder('Delivery only on mondays')
+    cy.placeOrder(Cypress.env('placeOrderText'))
     //13. Fill in fake Credit Card information and click on “Pay and Confirm Order”
-    cy.fillCardInfo('Vaisa','1111 1111 1111 1111 ','111','03','89')
+    cy.fillCardInfo(Cypress.env('cardName'), Cypress.env('cardNumber'), Cypress.env('cvc'), Cypress.env('mm'), Cypress.env('yy'))
     //14. Click on “Continue” button
     cy.continue()
     //15.  Click on “Logout” on top header
@@ -36,11 +48,11 @@ describe('apply digital user flow', () => {
   it('Test Case 2:  16-20 Login and submit a Cuntact Us form', () => {
    //16. On the “Login to your account” box and enter with previously created user
     cy.login()
-    cy.signin('username998@email.com',1234)
+    cy.signin(Cypress.env('email'),Cypress.env('password'))
    // 17. Click on “Contact us” on the header
    // 18. Fill required data and Click on “Submit”
    // 19. Press “OK” in the pop up
-   cy.contactUs('username', 'username998@email.com', 'contacSubject', 'message')
+   cy.contactUs(Cypress.env('username'), Cypress.env('email'), Cypress.env('contacSubject'), Cypress.env('message'))
    // 20. Finally, click on the “Logout” button on the header.
   })
 });

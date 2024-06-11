@@ -81,7 +81,7 @@ Cypress.Commands.add('contactUs', (contactName, contactEmail, contacSubject, con
     cy.get(CONTACT_US_SCREEN.email_field).type(contactEmail)
     cy.get(CONTACT_US_SCREEN.subject_field).type(contacSubject)
     cy.get(CONTACT_US_SCREEN.message_text_area).type(contactMessage)
-    cy.get(CONTACT_US_SCREEN.choose_file_button).selectFile('cypressdatailetoUpload.txt.txt')
+    cy.get(CONTACT_US_SCREEN.choose_file_button).selectFile('cypressdatailetoUpload.txt')
     cy.get(CONTACT_US_SCREEN.submit_button).click()
 })
     

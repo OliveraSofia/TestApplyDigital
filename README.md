@@ -1,9 +1,9 @@
-##Install
+## Install
 
 # clone this repo to a local directory
 git clone https://github.com/OliveraSofia/TestApplyDigital.git
 
-# install cypress
+# Install cypress
 npm install cypress
 
 # install the node_modules
@@ -12,19 +12,22 @@ npm install
 # start cypress
 npx cypress open
 
-#If you get stuck, here is more help:
+# If you get stuck, here is more help:
 [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
 ## Strategy and Test Cases
 
 # Strategy
-    The chosen strategy was to use [Custom Commands](https://docs.cypress.io/api/cypress-api/custom-commands). This way the test cases can be reused and it is easier to read them. 
+    The chosen strategy was to use [Custom Commands](https://docs.cypress.io/api/cypress-api/custom-commands). 
+    
+    This way the test cases can be reused and it is easier to read them. 
     Custom Comands can be found in: cypress\support\commands.js
-    To respect the order of the required steps, only 2 test cases were created:
+    It could be improved if the modules were tested isolated. The order was chosen to prioritize as required.
 
 # Test Cases
     
     Test Cases can be found in: cypress\e2e\ApplyDigitalspec.cy.js
+    To respect the order of the required steps, only 2 test cases were created:
 
     Test Case 1: Create an acount and place an order
         Steps: 
@@ -52,8 +55,8 @@ npx cypress open
             19. Press “OK” in the pop up
             20. Finally, click on the “Logout” button on the header.
 
-    It could be improved if the modules were tested isolated.
+    
 
 # Data Configuration:
 
-    Will be set up on next push ...
+    The project require a cypres.env.json file where is the information that the methods will use to feed the tests. Generally this kind of files are not added to the repositories to preserve confidentiality, since in this case it is false information it is included.
