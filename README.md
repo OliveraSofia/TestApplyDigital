@@ -60,3 +60,10 @@ npx cypress open
 # Data Configuration:
 
     The project require a cypres.env.json file where is the information that the methods will use to feed the tests. Generally this kind of files are not added to the repositories to preserve confidentiality, since in this case it is false information it is included.
+
+# Report
+npx cypress run
+
+    To get a report run te test in the terminal with the command  npx cypress run, reports will be stored in mochawesome-report folder
+
+     
