@@ -21,7 +21,7 @@ npx cypress open
     The chosen strategy was to use [Custom Commands](https://docs.cypress.io/api/cypress-api/custom-commands). 
     
     This way the test cases can be reused and it is easier to read them. 
-    Custom Comands can be found in: cypress\support\commands.js
+    Custom Commands can be found in: cypress\support\commands.js
     It could be improved if the modules were tested isolated. The order was chosen to prioritize as required.
 
 # Test Cases
@@ -29,7 +29,7 @@ npx cypress open
     Test Cases can be found in: cypress\e2e\ApplyDigitalspec.cy.js
     To respect the order of the required steps, only 2 test cases were created:
 
-    Test Case 1: Create an acount and place an order
+    Test Case 1: Create an account and place an order
         Steps: 
             1. Enter the website and scroll down about halfway down the page.
             2. Chose a product and click on “View product” under the picture of the product.
@@ -59,11 +59,11 @@ npx cypress open
 
 # Data Configuration:
 
-    The project require a cypres.env.json file where is the information that the methods will use to feed the tests. Generally this kind of files are not added to the repositories to preserve confidentiality, since in this case it is false information it is included.
+    The project requires  a cypres.env.json file where is the information that the methods will use to feed the tests. Generally this kind of files are not added to the repositories to preserve confidentiality, since in this case it is false information it is included.
 
 # Report
 npx cypress run
 
-    To get a report run te test in the terminal with the command  npx cypress run, reports will be stored in mochawesome-report folder
+    To get a report run the test in the terminal with the command  npx cypress run, reports will be stored in mochawesome-report folder
 
      
